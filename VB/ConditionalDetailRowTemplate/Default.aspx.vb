@@ -10,7 +10,7 @@ Imports System.Web.UI.WebControls
 Imports System.Web.UI.WebControls.WebParts
 Imports System.Web.UI.HtmlControls
 Imports System.Runtime.Serialization
-Imports DevExpress.Web.ASPxGridView
+Imports DevExpress.Web
 
 Namespace ConditionalDetailRowTemplate
 	Partial Public Class _Default

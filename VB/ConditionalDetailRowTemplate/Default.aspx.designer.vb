@@ -38,6 +38,6 @@ Namespace ConditionalDetailRowTemplate
 		''' Auto-generated field.
 		''' To modify move field declaration from designer file to code-behind file.
 		''' </remarks>
-		Protected gridMaster As Global.DevExpress.Web.ASPxGridView.ASPxGridView
+		Protected gridMaster As Global.DevExpress.Web.ASPxGridView
 	End Class
 End Namespace
