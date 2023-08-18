@@ -3,20 +3,41 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1054)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [Default.aspx](./CS/ConditionalDetailRowTemplate/Default.aspx) (VB: [Default.aspx](./VB/ConditionalDetailRowTemplate/Default.aspx))
-* [Default.aspx.cs](./CS/ConditionalDetailRowTemplate/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ConditionalDetailRowTemplate/Default.aspx.vb))
-<!-- default file list end -->
-# How to conditionally display one or another detail grid
+# Grid for ASP.NET Web Forms - How to conditionally display a detail grid
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e1054/)**
 <!-- run online end -->
 
+This example demonstrates how to dynamically change visibiluty of an [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) control in the [DetailRow](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewTemplates.DetailRow) template. 
 
-<p>This example demonstrates how to dynamically choose a DetailRow template for a given master row. The detail row template contains two grids, but their visibility depends on the value of a master row.</p>
+![Detail grids](detail-grids.png)
 
-<br/>
+The template contains two grids whose visibility depends on the value of a master row.
 
+```aspx
+<dx:ASPxGridView ID="gridMaster" runat="server" AutoGenerateColumns="False" KeyFieldName="ID" Width="634px">
+    <Templates>
+        <DetailRow>
+            <dx:ASPxGridView ID="gridProduct" Visible='<%# IsGridProductVisible(Container.KeyValue) %>' ... />
+            <dx:ASPxGridView ID="gridComponent" Visible='<%# IsGridComponentVisible(Container.KeyValue) %>' ... />
+        </DetailRow>
+    </Templates>
+  ...
+</dx:ASPxGridView>
+```
+```cs
+protected bool IsGridProductVisible(object categoryID) {
+    object categoryName = gridMaster.GetRowValuesByKeyValue(categoryID, "Category");
+    return "Product".Equals(categoryName);
+}
+protected bool IsGridComponentVisible(object categoryID) {
+    object categoryName = gridMaster.GetRowValuesByKeyValue(categoryID, "Category");
+    return "Component".Equals(categoryName);
+}
+```
 
+## Files to Review
+
+* [Default.aspx](./CS/ConditionalDetailRowTemplate/Default.aspx) (VB: [Default.aspx](./VB/ConditionalDetailRowTemplate/Default.aspx))
+* [Default.aspx.cs](./CS/ConditionalDetailRowTemplate/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ConditionalDetailRowTemplate/Default.aspx.vb))
