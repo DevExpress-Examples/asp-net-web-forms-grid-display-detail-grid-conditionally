@@ -1,10 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ConditionalDetailRowTemplate._Default" %>
 
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
-    Namespace="DevExpress.Web" TagPrefix="dxe" %>
-
-<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
-    Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
+    Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -15,37 +12,31 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <dxwgv:ASPxGridView ID="gridMaster" runat="server" AutoGenerateColumns="False" KeyFieldName="ID" Width="634px">
+        <dx:ASPxGridView ID="gridMaster" runat="server" AutoGenerateColumns="False" KeyFieldName="ID" Width="634px">
             <Templates>
                 <DetailRow>
-                    <dxwgv:ASPxGridView ID="gridProduct" runat="server" OnLoad="gridProduct_Load" Visible='<%# IsGridProductVisible(Container.KeyValue) %>' AutoGenerateColumns="False">
+                    <dx:ASPxGridView ID="gridProduct" runat="server" OnLoad="gridProduct_Load" Visible='<%# IsGridProductVisible(Container.KeyValue) %>' AutoGenerateColumns="False">
                         <Columns>
-                            <dxwgv:GridViewDataTextColumn FieldName="Name" VisibleIndex="0">
-                            </dxwgv:GridViewDataTextColumn>
-                            <dxwgv:GridViewDataHyperLinkColumn FieldName="WebPage" VisibleIndex="1">
-                            </dxwgv:GridViewDataHyperLinkColumn>
+                            <dx:GridViewDataTextColumn FieldName="Name" />
+                            <dx:GridViewDataHyperLinkColumn FieldName="WebPage" />
                         </Columns>
-                    </dxwgv:ASPxGridView>
-                    <dxwgv:ASPxGridView ID="gridComponent" runat="server" AutoGenerateColumns="False"
+                    </dx:ASPxGridView>
+                    <dx:ASPxGridView ID="gridComponent" runat="server" AutoGenerateColumns="False"
                         KeyFieldName="ID" OnLoad="gridComponent_Load" Visible='<%# IsGridComponentVisible(Container.KeyValue) %>' >
                         <Columns>
-                            <dxwgv:GridViewDataTextColumn FieldName="ClassName" Name="colName" VisibleIndex="0">
-                            </dxwgv:GridViewDataTextColumn>
-                            <dxwgv:GridViewDataTextColumn FieldName="Namespace" Name="colNamespace" VisibleIndex="1">
-                            </dxwgv:GridViewDataTextColumn>
-                            <dxwgv:GridViewDataCheckColumn FieldName="IsVisual" Name="colIsVisual" VisibleIndex="2">
-                            </dxwgv:GridViewDataCheckColumn>
+                            <dx:GridViewDataTextColumn FieldName="ClassName" Name="colName" />
+                            <dx:GridViewDataTextColumn FieldName="Namespace" Name="colNamespace" />
+                            <dx:GridViewDataCheckColumn FieldName="IsVisual" Name="colIsVisual" />
                         </Columns>
                         <SettingsDetail IsDetailGrid="True" />
-                    </dxwgv:ASPxGridView>
+                    </dx:ASPxGridView>
                 </DetailRow>
             </Templates>
             <Columns>
-                <dxwgv:GridViewDataTextColumn FieldName="Category" Name="colCategory" VisibleIndex="0">
-                </dxwgv:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Category" Name="colCategory" />
             </Columns>
             <SettingsDetail ShowDetailRow="True" />
-        </dxwgv:ASPxGridView>
+        </dx:ASPxGridView>
     </div>
     </form>
 </body>
