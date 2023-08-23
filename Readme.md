@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/e1054/)**
 <!-- run online end -->
 
-This example demonstrates how to dynamically change visibiluty of an [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) control in the [DetailRow](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewTemplates.DetailRow) template. 
+This example demonstrates how to dynamically change visibility of an [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) control in the [DetailRow](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewTemplates.DetailRow) template. 
 
 ![Detail grids](detail-grids.png)
 
