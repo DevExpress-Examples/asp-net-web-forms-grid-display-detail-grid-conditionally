@@ -12,7 +12,7 @@ This example demonstrates how to dynamically change visibiluty of an [ASPxGridVi
 
 ![Detail grids](detail-grids.png)
 
-The template contains two grids whose visibility depends on the value of a master row.
+The template contains two grids whose visibility depends on the value of the master row.
 
 ```aspx
 <dx:ASPxGridView ID="gridMaster" runat="server" AutoGenerateColumns="False" KeyFieldName="ID" Width="634px">
