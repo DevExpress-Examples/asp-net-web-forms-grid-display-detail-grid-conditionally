@@ -10,6 +10,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Runtime.Serialization;
 using DevExpress.Web;
+using DevExpress.Web.ASPxGridView;
 
 namespace ConditionalDetailRowTemplate {
     public partial class _Default : System.Web.UI.Page {
