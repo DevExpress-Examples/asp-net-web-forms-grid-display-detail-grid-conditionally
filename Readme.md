@@ -6,7 +6,7 @@
 
 # Grid for ASP.NET Web Forms - How to conditionally display a detail grid
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e1054/)**
+**[[Run Online]](https://codecentral.devexpress.com/128538518/)**
 <!-- run online end -->
 
 This example demonstrates how to dynamically change visibility of an [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) control in the [DetailRow](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewTemplates.DetailRow) template. 
